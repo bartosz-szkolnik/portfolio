@@ -1,0 +1,81 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { Card, CardContent } from './common/card';
+import { Button } from './common/button';
+import { ReactNode } from 'react';
+import { GithubIcon, LinkedInIcon } from './icons';
+
+type Social = {
+  name: string;
+  text: string;
+  href: string;
+  icon: ReactNode;
+};
+
+const SOCIALS = [
+  {
+    name: 'Github',
+    text: '/bartosz-szkolnik',
+    href: 'https://github.com/bartosz-szkolnik',
+    icon: <GithubIcon className="size-8" />,
+  },
+  {
+    name: 'LinkedIn',
+    text: '/bartosz-szkolnik',
+    href: 'https://www.linkedin.com/in/bartosz-szkolnik-9566322a8/',
+    icon: <LinkedInIcon className="size-8" />,
+  },
+] satisfies Social[];
+
+export function Profile() {
+  return (
+    <Card>
+      <CardContent className="pt-6">
+        <div className="flex flex-col items-start gap-2">
+          <div className="flex w-full flex-row items-center gap-4 md:flex-col md:items-start">
+            <Image
+              priority
+              width={150}
+              height={150}
+              quality={100}
+              src="https://avatars.githubusercontent.com/u/20556964?v=4"
+              alt="Profile Picture"
+              className="size-12 h-auto rounded-full border-2 object-cover md:w-full"
+            />
+            <div className="flex flex-col items-start justify-center">
+              <h1 className="text-xl font-bold md:mt-4 md:text-2xl">Bartosz Szkolnik</h1>
+              <p className="text-sm text-muted-foreground md:text-base">TypeScript Developer</p>
+            </div>
+          </div>
+          <p className="mt-2 text-start text-sm text-muted-foreground">I am a ...</p>
+          <div className="mt-4 flex w-full flex-col gap-4">
+            <Button asChild>
+              <Link className="font-semibold" href="mailto:bartosz.szkolnik@outlook.com">
+                Write to me!
+              </Link>
+            </Button>
+            <Button asChild>
+              <Link target="_blank" href="/bartosz-szkolnik-resume.pdf" className="font-semibold">
+                My Resumé
+              </Link>
+            </Button>
+          </div>
+          <div className="mt-4 flex w-full flex-col border-t border-border pt-4">
+            {SOCIALS.map(({ href, icon, name, text }) => {
+              return (
+                <Button key={name} variant={'link'} className="group mt-0 flex justify-start py-1">
+                  <Link href={href} target="_blank" className="flex cursor-pointer items-center gap-2">
+                    {icon}
+                    <p className="text-sm text-muted-foreground transition-colors duration-100 ease-linear group-hover:text-primary">
+                      {text}
+                    </p>
+                  </Link>
+                </Button>
+              );
+            })}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
+import { geistMono, geistSans } from '@ui/font';
+
 import '../styles/globals.css';
-import { geistMono, geistSans } from '@/ui/font';
 
 export const metadata: Metadata = {
   title: {
