@@ -27,7 +27,7 @@ const SOCIALS = [
   },
 ] satisfies Social[];
 
-export function Profile() {
+export function ProfileSection() {
   return (
     <Card>
       <CardContent className="pt-6">
@@ -61,18 +61,16 @@ export function Profile() {
             </Button>
           </div>
           <div className="mt-4 flex w-full flex-col border-t border-border pt-4">
-            {SOCIALS.map(({ href, icon, name, text }) => {
-              return (
-                <Button key={name} variant={'link'} className="group mt-0 flex justify-start py-1">
-                  <Link href={href} target="_blank" className="flex cursor-pointer items-center gap-2">
-                    {icon}
-                    <p className="text-sm text-muted-foreground transition-colors duration-100 ease-linear group-hover:text-primary">
-                      {text}
-                    </p>
-                  </Link>
-                </Button>
-              );
-            })}
+            {SOCIALS.map(({ href, icon, name, text }) => (
+              <Button key={name} variant={'link'} className="group mt-0 flex justify-start py-1">
+                <Link href={href} target="_blank" className="flex cursor-pointer items-center gap-2">
+                  {icon}
+                  <p className="text-sm text-muted-foreground transition-colors duration-100 ease-linear group-hover:text-primary">
+                    {text}
+                  </p>
+                </Link>
+              </Button>
+            ))}
           </div>
         </div>
       </CardContent>
