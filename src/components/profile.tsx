@@ -4,6 +4,8 @@ import { Card, CardContent } from './common/card';
 import { Button } from './common/button';
 import { ReactNode } from 'react';
 import { GithubIcon, LinkedInIcon } from './icons';
+import { cn } from '@lib/utils';
+import { geistMono } from '@ui/font';
 
 type Social = {
   name: string;
@@ -44,19 +46,28 @@ export function ProfileSection() {
             />
             <div className="flex flex-col items-start justify-center">
               <h1 className="text-xl font-bold md:mt-4 md:text-2xl">Bartosz Szkolnik</h1>
-              <p className="text-sm text-muted-foreground md:text-base">TypeScript Developer</p>
+              <p className="text-sm text-muted-foreground md:text-base">
+                Software Engineer & <br /> TypeScript Developer
+              </p>
             </div>
           </div>
           <p className="mt-2 text-start text-sm text-muted-foreground">I am a ...</p>
           <div className="mt-4 flex w-full flex-col gap-4">
             <Button asChild>
-              <Link className="font-semibold" href="mailto:bartosz.szkolnik@outlook.com">
+              <Link
+                className={cn('text-sm font-bold md:text-base', geistMono.className)}
+                href="mailto:bartosz.szkolnik@outlook.com"
+              >
                 Write to me!
               </Link>
             </Button>
             <Button asChild>
-              <Link target="_blank" href="/bartosz-szkolnik-resume.pdf" className="font-semibold">
-                My Resumé
+              <Link
+                className={cn('text-sm font-bold md:text-base', geistMono.className)}
+                target="_blank"
+                href="/bartosz-szkolnik-resume.pdf"
+              >
+                Download My Resumé
               </Link>
             </Button>
           </div>

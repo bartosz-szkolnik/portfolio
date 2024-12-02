@@ -1,4 +1,7 @@
 import { AboutMeSection } from '@components/about-me';
+import { ExperienceSection } from '@components/experience';
+import { Footer } from '@components/footer';
+import { ProjectsSection } from '@components/projects';
 import { Sidebar } from '@components/sidebar';
 
 export default function Home() {
@@ -9,8 +12,11 @@ export default function Home() {
           <Sidebar />
           <main className="md:col-span-2">
             <AboutMeSection />
+            <ProjectsSection />
+            <ExperienceSection />
           </main>
         </div>
+        <Footer />
       </div>
     </div>
   );

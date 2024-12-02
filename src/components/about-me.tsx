@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './common/card';
 
 export function AboutMeSection() {
   return (
-    <Card>
+    <Card className="mb-6">
       <CardHeader>
         <CardTitle>About me</CardTitle>
       </CardHeader>
