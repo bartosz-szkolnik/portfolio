@@ -27,7 +27,6 @@ export function ExperienceSection() {
                   <div>
                     <div className="flex items-center">
                       <h3 className="font-semibold">{title}</h3>
-                      <div className="ml-4 text-xs leading-none text-muted-foreground">{duration}</div>
                     </div>
                     {link ? (
                       <a target="_blank" href={link} className="underline">
@@ -40,7 +39,7 @@ export function ExperienceSection() {
                 </div>
                 <p className="mt-2 flex items-center text-xs text-muted-foreground">
                   <CalendarDays className="mr-2 size-3" />
-                  {years}
+                  {years} <span className="ml-2 whitespace-nowrap">({duration})</span>
                 </p>
                 <p className="mt-2 text-sm">{description}</p>
               </li>

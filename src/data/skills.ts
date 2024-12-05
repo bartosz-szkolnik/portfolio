@@ -1,0 +1,42 @@
+import { Tool } from '@components/misc/tools';
+
+export const ADVANCED_SKILLS = [
+  'TypeScript',
+  'JavaScript',
+  'Next.js',
+  'React',
+  'HTML5',
+  'CSS3',
+  'TailwindCSS',
+  'Git',
+  'Angular',
+  'Angular Material',
+] satisfies Tool[];
+
+export const STILL_LEARNING_SKILLS = [
+  'Node.js',
+  'Express.js',
+  'PostgreSQL',
+  'Drizzle',
+  'Docker',
+  'SQL',
+  'Bootstrap',
+  'CSS-modules',
+  'Deno',
+  'Fastify',
+  'Figma',
+  'Jira',
+  'MongoDB',
+  'MySQL',
+  'Nginx',
+  'Prisma',
+  'Redux',
+  'Remix',
+  'RxJS',
+  'Sass',
+  'Shadcn/ui',
+  'Storybook',
+  'Strapi',
+  'Supabase',
+  'Vercel',
+] satisfies Tool[];

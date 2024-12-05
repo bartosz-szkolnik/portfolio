@@ -12,10 +12,10 @@ export function ProjectsSection() {
       <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
         {PROJECTS.map(({ title, appLink, description, stack, githubLink }) => (
           <Card key={title}>
-            <CardContent className="h-full pt-6">
+            <CardContent className="h-full pb-5 pt-6">
               <div className="flex h-full flex-col">
                 <p className="text-lg font-semibold text-primary">{title}</p>
-                <p className="mb-2 mt-1 text-sm text-muted-foreground">{description}</p>
+                <p className="mb-5 mt-1 text-sm text-muted-foreground">{description}</p>
                 <p className="mb-2 mt-auto text-xs font-semibold text-primary">Tech stack:</p>
                 <div className="mb-4 flex flex-wrap gap-2 text-xs font-medium text-muted-foreground">
                   {stack.map(tool => (

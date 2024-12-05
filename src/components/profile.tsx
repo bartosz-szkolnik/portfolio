@@ -6,6 +6,7 @@ import { ReactNode } from 'react';
 import { GithubIcon, LinkedInIcon } from './icons';
 import { cn } from '@lib/utils';
 import { geistMono } from '@ui/font';
+import { MailIcon } from 'lucide-react';
 
 type Social = {
   name: string;
@@ -27,6 +28,12 @@ const SOCIALS = [
     href: 'https://www.linkedin.com/in/bartosz-szkolnik-9566322a8/',
     icon: <LinkedInIcon className="size-8" />,
   },
+  {
+    name: 'Mail',
+    text: 'bartosz.szkolnik@outlook.com',
+    href: '',
+    icon: <MailIcon className="size-4" />,
+  },
 ] satisfies Social[];
 
 export function ProfileSection() {
@@ -47,11 +54,14 @@ export function ProfileSection() {
             <div className="flex flex-col items-start justify-center">
               <h1 className="text-xl font-bold md:mt-4 md:text-2xl">Bartosz Szkolnik</h1>
               <p className="text-sm text-muted-foreground md:text-base">
-                Software Engineer & <br /> TypeScript Developer
+                Software Engineer <br /> & TypeScript Developer
               </p>
             </div>
           </div>
-          <p className="mt-2 text-start text-sm text-muted-foreground">I am a ...</p>
+          <p className="mt-2 text-start text-sm text-muted-foreground">
+            I am a problem solver with a passion for building user-friendly interfaces with TypeScript, Next.js and
+            other tools.
+          </p>
           <div className="mt-4 flex w-full flex-col gap-4">
             <Button asChild>
               <Link
@@ -72,16 +82,29 @@ export function ProfileSection() {
             </Button>
           </div>
           <div className="mt-4 flex w-full flex-col border-t border-border pt-4">
-            {SOCIALS.map(({ href, icon, name, text }) => (
-              <Button key={name} variant={'link'} className="group mt-0 flex justify-start py-1">
-                <Link href={href} target="_blank" className="flex cursor-pointer items-center gap-2">
-                  {icon}
-                  <p className="text-sm text-muted-foreground transition-colors duration-100 ease-linear group-hover:text-primary">
-                    {text}
-                  </p>
-                </Link>
-              </Button>
-            ))}
+            {SOCIALS.map(({ href, icon, name, text }) => {
+              if (!href) {
+                return (
+                  <div key={name} className="ml-4 mt-0 flex h-9 items-center justify-start gap-2 py-1">
+                    {icon}
+                    <p className="text-sm text-muted-foreground transition-colors duration-100 ease-linear group-hover:text-primary">
+                      {text}
+                    </p>
+                  </div>
+                );
+              }
+
+              return (
+                <Button key={name} variant={'link'} className="group mt-0 flex h-9 justify-start py-1">
+                  <Link href={href} target="_blank" className="flex cursor-pointer items-center gap-2">
+                    {icon}
+                    <p className="text-sm text-muted-foreground transition-colors duration-100 ease-linear group-hover:text-primary">
+                      {text}
+                    </p>
+                  </Link>
+                </Button>
+              );
+            })}
           </div>
         </div>
       </CardContent>

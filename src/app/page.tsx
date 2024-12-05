@@ -9,7 +9,9 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto max-w-screen-lg px-4 py-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <Sidebar />
+          <aside className="relative md:col-span-1">
+            <Sidebar />
+          </aside>
           <main className="md:col-span-2">
             <AboutMeSection />
             <ProjectsSection />

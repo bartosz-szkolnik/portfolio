@@ -3,9 +3,9 @@ import { SkillsSection } from './skills';
 
 export function Sidebar() {
   return (
-    <aside className="md:col-span-1">
+    <div className="sticky top-8">
       <ProfileSection />
       <SkillsSection />
-    </aside>
+    </div>
   );
 }
