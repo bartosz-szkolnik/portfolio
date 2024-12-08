@@ -10,6 +10,8 @@ type FrontendTool =
   | 'CSS-modules'
   | 'Shadcn/ui'
   | 'Remix'
+  | 'Solid.js'
+  | 'Vite'
   | 'Storybook'
   | 'Angular'
   | 'Angular Material'
@@ -30,6 +32,6 @@ type BackendTool =
   | 'MongoDB'
   | 'Supabase';
 
-type OtherTool = 'Jira' | 'Git' | 'Vercel' | 'Docker' | 'Figma' | 'Strapi' | 'Nginx';
+type OtherTool = 'Jira' | 'Git' | 'Vercel' | 'Docker' | 'Figma' | 'Strapi' | 'Nx';
 
 export type Tool = Language | FullstackTool | FrontendTool | BackendTool | OtherTool;

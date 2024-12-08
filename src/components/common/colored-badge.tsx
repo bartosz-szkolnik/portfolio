@@ -1,6 +1,7 @@
 import { Tool } from '@components/misc/tools';
 import { Badge } from './badge';
 import { COLORS } from '@components/misc/colors';
+import { cn } from '@lib/utils';
 
 type ColoredBadgeProps = {
   text: Tool | (string & {});
@@ -15,7 +16,7 @@ export function ColoredBadge({ text, variant = 'default' }: ColoredBadgeProps) {
   return (
     <Badge
       variant={color ? variant : 'secondary'}
-      className={'whitespace-nowrap border-2'}
+      className={cn('whitespace-nowrap border-2', { 'border-gray-400': color?.light.showBorder })}
       style={{
         backgroundColor: color?.light.backgroundColor ?? '',
         color: color?.light.color ?? '',
