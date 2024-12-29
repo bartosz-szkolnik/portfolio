@@ -18,6 +18,7 @@ export const ADVANCED_SKILLS = [
   'RxJS',
   'Shadcn/ui',
   'Storybook',
+  'Vite',
 ] satisfies Tool[];
 
 export const STILL_LEARNING_SKILLS = [

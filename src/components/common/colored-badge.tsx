@@ -5,22 +5,20 @@ import { cn } from '@lib/utils';
 
 type ColoredBadgeProps = {
   text: Tool | (string & {});
-  variant?: 'default' | 'outline';
 };
 
 const isPredefined = (text: string): text is Tool => Object.keys(COLORS).includes(text);
 
-export function ColoredBadge({ text, variant = 'default' }: ColoredBadgeProps) {
+export function ColoredBadge({ text }: ColoredBadgeProps) {
   const color = isPredefined(text) ? COLORS[text] : null;
 
   return (
     <Badge
-      variant={color ? variant : 'secondary'}
-      className={cn('whitespace-nowrap border-2', { 'border-gray-400': color?.light.showBorder })}
-      style={{
-        backgroundColor: color?.light.backgroundColor ?? '',
-        color: color?.light.color ?? '',
-      }}
+      className={cn(
+        `whitespace-nowrap border-2 hover:${color?.light.bgColor} ${color?.light.bgColor}`,
+        color?.light.showBorder ? `border-${color.light.borderColor}` : 'border-none',
+      )}
+      style={{ color: color?.light.color ?? '' }}
     >
       {text}
     </Badge>
