@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { GithubIcon, LinkedInIcon } from './icons';
 import { MailIcon } from 'lucide-react';
 import { ReactNode } from 'react';
+import { ThemeSwitcher } from './theme-switcher';
 
 export function Footer() {
   return (
@@ -16,6 +17,7 @@ export function Footer() {
         <Icon to="https://www.linkedin.com/in/bartosz-szkolnik-9566322a8/">
           <LinkedInIcon className="size-6" />
         </Icon>
+        <ThemeSwitcher />
       </div>
       <p className="py-2 text-center text-sm opacity-50">
         &copy; {new Date().getFullYear()} Bartosz Szkolnik Software. All rights reserved.
@@ -37,7 +39,11 @@ export function Footer() {
 
 function Icon({ children, to, toNewTab = true }: { to: string; children: ReactNode; toNewTab?: boolean }) {
   return (
-    <a href={to} target={toNewTab ? '_blank' : ''} className="rounded-full p-3 duration-200 hover:bg-gray-200">
+    <a
+      href={to}
+      target={toNewTab ? '_blank' : ''}
+      className="rounded-full p-3 duration-200 hover:bg-gray-200 hover:dark:bg-gray-700"
+    >
       {children}
     </a>
   );

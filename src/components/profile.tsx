@@ -20,13 +20,13 @@ const SOCIALS = [
     name: 'Github',
     text: '/bartosz-szkolnik',
     href: 'https://github.com/bartosz-szkolnik',
-    icon: <GithubIcon className="size-8" />,
+    icon: <GithubIcon className="size-4" />,
   },
   {
     name: 'LinkedIn',
     text: '/bartosz-szkolnik',
     href: 'https://www.linkedin.com/in/bartosz-szkolnik-9566322a8/',
-    icon: <LinkedInIcon className="size-8" />,
+    icon: <LinkedInIcon className="size-4" />,
   },
   {
     name: 'Mail',
@@ -54,7 +54,7 @@ export function ProfileSection() {
             <div className="flex flex-col items-start justify-center">
               <h1 className="text-xl font-bold md:mt-4 md:text-2xl">Bartosz Szkolnik</h1>
               <p className="text-sm text-muted-foreground md:text-base">
-                Software Engineer <br /> & TypeScript Developer
+                Software Engineer <br className="hidden md:block" /> & TypeScript Developer
               </p>
             </div>
           </div>
