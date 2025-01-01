@@ -292,4 +292,46 @@ export const COLORS: Record<Tool, Color> = {
       bgColor: 'bg-gradient-to-br from-blue-500 to-fuchsia-600',
     },
   },
+  GraphQL: {
+    light: {
+      color: '#fff',
+      bgColor: 'bg-fuchsia-500',
+      backgroundColor: '',
+    },
+  },
+  Jest: {
+    light: {
+      color: '#000',
+      bgColor: 'bg-green-400',
+      backgroundColor: '',
+    },
+  },
+  'Testing-library': {
+    light: {
+      color: '#fff',
+      bgColor: 'bg-red-500',
+      backgroundColor: '',
+    },
+  },
+  XState: {
+    light: {
+      color: '#fff',
+      bgColor: 'bg-slate-600',
+      backgroundColor: '',
+    },
+  },
+  OpenAPI: {
+    light: {
+      color: '#fff',
+      bgColor: 'bg-lime-600',
+      backgroundColor: '',
+    },
+  },
+  Electron: {
+    light: {
+      color: '#000',
+      bgColor: 'bg-cyan-200',
+      backgroundColor: '',
+    },
+  },
 };

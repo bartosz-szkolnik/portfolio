@@ -19,6 +19,8 @@ export const ADVANCED_SKILLS = [
   'Shadcn/ui',
   'Storybook',
   'Vite',
+  'Jest',
+  'Testing-library',
 ] satisfies Tool[];
 
 export const STILL_LEARNING_SKILLS = [
@@ -26,6 +28,7 @@ export const STILL_LEARNING_SKILLS = [
   'Deno',
   'Express.js',
   'Fastify',
+  'GraphQL',
   'SQL',
   'PostgreSQL',
   'MySQL',
@@ -35,6 +38,7 @@ export const STILL_LEARNING_SKILLS = [
   'Figma',
   'MongoDB',
   'Nx',
+  'XState',
   'Remix',
   'Strapi',
   'Vercel',

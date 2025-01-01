@@ -1,6 +1,6 @@
 type Language = 'TypeScript' | 'JavaScript' | 'HTML5' | 'CSS3';
 
-type FullstackTool = never;
+type FullstackTool = 'XState' | 'OpenAPI' | 'Electron';
 
 type FrontendTool =
   | 'React'
@@ -23,6 +23,7 @@ type BackendTool =
   | 'Node.js'
   | 'Deno'
   | 'Express.js'
+  | 'GraphQL'
   | 'Fastify'
   | 'Drizzle'
   | 'Prisma'
@@ -32,6 +33,8 @@ type BackendTool =
   | 'MongoDB'
   | 'Supabase';
 
+type TestingTool = 'Jest' | 'Testing-library';
+
 type OtherTool = 'Jira' | 'Git' | 'Vercel' | 'Docker' | 'Figma' | 'Strapi' | 'Nx';
 
-export type Tool = Language | FullstackTool | FrontendTool | BackendTool | OtherTool;
+export type Tool = Language | FullstackTool | FrontendTool | BackendTool | TestingTool | OtherTool;
