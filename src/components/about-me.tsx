@@ -8,10 +8,10 @@ export function AboutMeSection() {
       </CardHeader>
       <CardContent>
         <p className="text-muted-foreground">
-          I am a <strong>professional Frontend Developer</strong> and an <strong>aspiring Full-stack Developer</strong>.
-          What brought me to the programming world was the ability to create things and solve problems with code. I
-          specialize in building usable, modern, efficient and user friendly interfaces and solutions on both frontend
-          and backend sides.
+          I am a <strong>professional Frontend Developer</strong> and an <strong>aspiring Full-stack Developer</strong>{' '}
+          with {new Date().getFullYear() - 2018 - 1} years of work experience. What brought me to the programming world
+          was the ability to create things and solve problems with code. I specialize in building usable, modern,
+          efficient and user friendly interfaces and solutions on both frontend and backend sides.
         </p>
         <br />
         <p className="mb-1 text-muted-foreground">

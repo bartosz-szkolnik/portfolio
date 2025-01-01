@@ -31,7 +31,7 @@ export function Footer() {
         >
           Christopher Alonzo
         </Link>
-        . Built by Bartosz Szkolnik.
+        . Built by Bartosz Szkolnik.
       </p>
     </footer>
   );

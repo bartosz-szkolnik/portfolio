@@ -59,7 +59,7 @@ export function ProfileSection() {
             </div>
           </div>
           <p className="mt-2 text-start text-sm text-muted-foreground">
-            I am a problem solver with a passion for building user-friendly interfaces with TypeScript, Next.js and
+            I am a problem solver with a passion for building user-friendly interfaces using TypeScript, Next.js and
             other tools.
           </p>
           <div className="mt-4 flex w-full flex-col gap-4">
