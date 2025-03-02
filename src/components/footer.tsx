@@ -3,10 +3,11 @@ import { GithubIcon, LinkedInIcon } from './icons';
 import { MailIcon } from 'lucide-react';
 import { ReactNode } from 'react';
 import { ThemeSwitcher } from './theme-switcher';
+import { cn } from '@lib/utils';
 
-export function Footer() {
+export function Footer({ className }: { className?: string }) {
   return (
-    <footer className="container mx-auto mt-10 max-w-screen-lg">
+    <footer className={cn('container mx-auto mt-10 max-w-screen-lg', className)}>
       <div className="mb-2 flex justify-center gap-4">
         <Icon to="mailto:bartosz.szkolnik@outlook.com" toNewTab={false}>
           <MailIcon className="size-6" />

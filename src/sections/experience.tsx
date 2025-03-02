@@ -1,10 +1,10 @@
 import { CalendarDays, ChevronsUpDown } from 'lucide-react';
 import { experienceData, ExperienceItem as ExperienceItemType } from '../data/experience';
-import { Card, CardContent } from './common/card';
+import { Card, CardContent } from '@components/common/card';
 import Image from 'next/image';
-import { AnimatedCollapsibleContent, Collapsible, CollapsibleTrigger } from './common/collapsible';
-import { Button } from './common/button';
-import { DetailsTechStack } from './common/details';
+import { AnimatedCollapsibleContent, Collapsible, CollapsibleTrigger } from '@components/common/collapsible';
+import { Button } from '@components/common/button';
+import { DetailsTechStack } from '@components/common/details';
 
 export function ExperienceSection() {
   return (

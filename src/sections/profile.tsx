@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card, CardContent } from './common/card';
-import { Button } from './common/button';
+import { Card, CardContent } from '@components/common/card';
+import { Button } from '@components/common/button';
 import { ReactNode } from 'react';
-import { GithubIcon, LinkedInIcon } from './icons';
+import { GithubIcon, LinkedInIcon } from '@components/icons';
 import { cn } from '@lib/utils';
 import { geistMono } from '@ui/font';
 import { MailIcon } from 'lucide-react';

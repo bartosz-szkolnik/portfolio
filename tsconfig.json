@@ -19,6 +19,7 @@
       }
     ],
     "paths": {
+      "@sections/*": ["./src/sections/*"],
       "@components/*": ["./src/components/*"],
       "@lib/*": ["./src/lib/*"],
       "@ui/*": ["./src/ui/*"]

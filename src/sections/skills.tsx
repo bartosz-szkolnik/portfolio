@@ -1,6 +1,6 @@
 import { ADVANCED_SKILLS, STILL_LEARNING_SKILLS } from '../data/skills';
-import { Card, CardContent, CardHeader, CardTitle } from './common/card';
-import { ColoredBadge } from './common/colored-badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@components/common/card';
+import { ColoredBadge } from '@components/common/colored-badge';
 
 export function SkillsSection() {
   return (

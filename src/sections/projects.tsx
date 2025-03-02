@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { PROJECTS } from '../data/projects';
-import { Card, CardContent } from './common/card';
+import { Card, CardContent } from '@components/common/card';
 import { ExternalLink } from 'lucide-react';
-import { ColoredBadge } from './common/colored-badge';
-import { Button } from './common/button';
+import { ColoredBadge } from '@components/common/colored-badge';
+import { Button } from '@components/common/button';
 
 export function ProjectsSection() {
   return (

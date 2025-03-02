@@ -1,8 +1,9 @@
-import { AboutMeSection } from '@components/about-me';
-import { ExperienceSection } from '@components/experience';
+import { AboutMeSection } from '@sections/about-me';
+import { ExperienceSection } from '@sections/experience';
 import { Footer } from '@components/footer';
-import { ProjectsSection } from '@components/projects';
-import { Sidebar } from '@components/sidebar';
+import { ProjectsSection } from '@sections/projects';
+import { RecentPosts } from '@sections/recent-posts';
+import { Sidebar } from '@sections/sidebar';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <main className="md:col-span-2">
             <AboutMeSection />
             <ProjectsSection />
+            {false && <RecentPosts />}
             <ExperienceSection />
           </main>
         </div>

@@ -33,6 +33,17 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    /* Types for sugar-high: */
+    --sh-identifier: #354150;
+    --sh-keyword: #f47067;
+    --sh-string: #00a99a;
+    --sh-class: #8d85ff;
+    --sh-property: #4e8fdf;
+    --sh-entity: #6eafad;
+    --sh-jsxliterals: #bf7db6;
+    --sh-sign: #8996a3;
+    --sh-comment: #a19595;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -59,7 +70,24 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+
+    /* Types for sugar-high: */
+    --sh-identifier: white;
+    --sh-string: #0fa295;
+    --sh-class: #4c97f8;
   }
+}
+
+pre code {
+  counter-reset: sh-line-number;
+}
+
+.sh__line::before {
+  counter-increment: sh-line-number 1;
+  content: counter(sh-line-number);
+  margin-right: 24px;
+  text-align: right;
+  color: #a4a4a4;
 }
 
 @layer base {
@@ -68,5 +96,26 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  .title {
+    @apply text-3xl font-bold underline decoration-border/75 decoration-solid underline-offset-[10px];
+  }
+
+  .prose pre {
+    @apply overflow-x-auto rounded-lg bg-accent px-5 py-4 text-sm;
+  }
+
+  .prose code {
+    @apply rounded-lg px-1 py-0.5;
+  }
+
+  .prose pre code {
+    @apply p-0;
+    line-height: 1.75;
+  }
+
+  .prose code span {
+    @apply font-medium;
   }
 }
