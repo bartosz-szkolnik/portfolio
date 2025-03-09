@@ -1,6 +1,8 @@
+import { Tool } from '@components/misc/tools';
+
 type Project = {
   title: string;
-  stack: string[];
+  stack: Tool[];
   appLink: string;
   githubLink: string;
   description: string;
