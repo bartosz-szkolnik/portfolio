@@ -21,6 +21,7 @@ export const ADVANCED_SKILLS = [
   'Vite',
   'Jest',
   'Testing-library',
+  'Vitest',
 ] satisfies Tool[];
 
 export const STILL_LEARNING_SKILLS = [

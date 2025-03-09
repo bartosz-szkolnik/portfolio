@@ -33,7 +33,7 @@ type BackendTool =
   | 'MongoDB'
   | 'Supabase';
 
-type TestingTool = 'Jest' | 'Testing-library';
+type TestingTool = 'Jest' | 'Testing-library' | 'Vitest';
 
 type OtherTool = 'Jira' | 'Git' | 'Vercel' | 'Docker' | 'Figma' | 'Strapi' | 'Nx';
 
