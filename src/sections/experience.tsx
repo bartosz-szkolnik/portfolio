@@ -53,7 +53,7 @@ type ExperienceItemProps = ExperienceItemType & {
 };
 
 function ExperienceItem(props: ExperienceItemProps) {
-  const { title, company, duration, description, logo, years, link, className, stack } = props;
+  const { title, company, duration, description, logo, years, link, className, stack, additionalStack } = props;
 
   return (
     <div className={className}>
@@ -82,7 +82,7 @@ function ExperienceItem(props: ExperienceItemProps) {
         {years} <span className="ml-2 whitespace-nowrap">({duration})</span>
       </p>
       <div className="mt-2">{description}</div>
-      {stack && <DetailsTechStack stack={stack} />}
+      {stack && <DetailsTechStack stack={stack} additionalStack={additionalStack} />}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-details[open] summary ~ * {
+/* details[open] summary ~ * {
   animation: sweep 0.5s ease-in-out;
 }
 
@@ -15,4 +15,4 @@ details[open] summary ~ * {
 
 summary {
   padding-inline-start: -1rem;
-}
+} */

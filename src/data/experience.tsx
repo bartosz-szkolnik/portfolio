@@ -1,7 +1,6 @@
 import { StaticImageData } from 'next/image';
 import { ReactElement } from 'react';
 import Politechnika from '../img/politechnika.png';
-import JavaScript from '../img/JavaScript.webp';
 import TypeScript from '../img/TypeScript.png';
 import TTSW from '../img/ttsw.jpeg';
 import CEZ from '../img/cez.jpeg';
@@ -17,6 +16,7 @@ export type ExperienceItem = {
   duration: string;
   description: ReactElement;
   stack?: Tool[];
+  additionalStack?: Tool[];
   logo?: string | StaticImageData;
   link?: string;
   bodyLeasing?: ExperienceItem[];
@@ -37,19 +37,8 @@ export const experienceData = [
       </p>
     ),
     logo: TypeScript,
-    stack: [
-      'TypeScript',
-      'Next.js',
-      'TailwindCSS',
-      'Shadcn/ui',
-      'Vite',
-      'Node.js',
-      'Drizzle',
-      'PostgreSQL',
-      'Docker',
-      'Jest',
-      'Testing-library',
-    ],
+    stack: ['TypeScript', 'Next.js', 'TailwindCSS', 'Shadcn/ui', 'Drizzle', 'Fastify'],
+    additionalStack: ['Node.js', 'Vite', 'PostgreSQL', 'Docker', 'Vitest', 'Testing-library'],
   },
   {
     years: '2018 - Today',
@@ -66,19 +55,8 @@ export const experienceData = [
     company: ' Transition Technologies Software',
     logo: TTSW,
     link: 'https://ttsw.com.pl/en/main-page/',
-    stack: [
-      'TypeScript',
-      'Angular',
-      'Angular Material',
-      'RxJS',
-      'Storybook',
-      'Sass',
-      'Bootstrap',
-      'Jira',
-      'Git',
-      'Jest',
-      'Testing-library',
-    ],
+    stack: ['TypeScript', 'Angular', 'RxJS', 'Jira', 'Git', 'Jest', 'Testing-library'],
+    additionalStack: ['Angular Material', 'Storybook', 'Bootstrap', 'Sass'],
     bodyLeasing: [
       {
         years: '2023 - 2024',
@@ -87,7 +65,8 @@ export const experienceData = [
         company: 'Miquido',
         logo: Miquido,
         link: 'https://www.miquido.com/',
-        stack: ['TypeScript', 'Angular', 'Angular Material', 'RxJS', 'Sass', 'Jira', 'Git', 'GraphQL'],
+        stack: ['TypeScript', 'Angular', 'Angular Material', 'RxJS', 'GraphQL'],
+        additionalStack: ['Sass', 'Jira', 'Git'],
         description: (
           <>
             <p className="mt-2 text-sm">With this company I worked on:</p>
@@ -118,7 +97,8 @@ export const experienceData = [
         company: 'Ministerstwo Finansów',
         logo: MF,
         link: 'https://www.gov.pl/web/finanse',
-        stack: ['TypeScript', 'Angular', 'TailwindCSS', 'RxJS', 'Git', 'Jest', 'Testing-library'],
+        stack: ['TypeScript', 'Angular', 'TailwindCSS', 'RxJS'],
+        additionalStack: ['Git', 'Jest', 'Testing-library'],
         description: (
           <p className="mt-2 text-sm">
             With this company I worked on{' '}
@@ -142,18 +122,8 @@ export const experienceData = [
         title: 'Angular Frontend Developer',
         duration: '1.5 years',
         company: 'Centralny Ośrodek Informatyki',
-        stack: [
-          'TypeScript',
-          'Angular',
-          'RxJS',
-          'XState',
-          'Angular Material',
-          'Jest',
-          'Testing-library',
-          'Storybook',
-          'OpenAPI',
-          'Bootstrap',
-        ],
+        stack: ['TypeScript', 'Angular', 'RxJS', 'Angular Material', 'Jest', 'Testing-library'],
+        additionalStack: ['XState', 'Storybook', 'OpenAPI', 'Bootstrap'],
         description: (
           <p className="text-sm">
             Whilst working for this company, I was asked to help with a couple of projects. The most notable one was{' '}
@@ -175,7 +145,8 @@ export const experienceData = [
         company: 'Centrum e-Zdrowia',
         logo: CEZ,
         link: 'https://www.cez.gov.pl/pl',
-        stack: ['TypeScript', 'Angular', 'RxJS', 'Sass', 'Jest', 'Testing-library', 'Bootstrap'],
+        stack: ['TypeScript', 'Angular', 'RxJS', 'Sass', 'Jest', 'Testing-library'],
+        additionalStack: ['Bootstrap'],
         description: (
           <>
             <p className="mt-2 text-sm">With this company I worked on:</p>
@@ -209,7 +180,8 @@ export const experienceData = [
         duration: '1.5 years',
         company: 'Confidential',
         logo: TypeScript,
-        stack: ['TypeScript', 'Angular', 'Angular Material', 'RxJS', 'Sass', 'Bootstrap', 'Git', 'Electron'],
+        stack: ['TypeScript', 'Angular', 'Angular Material', 'RxJS', 'Sass'],
+        additionalStack: ['Bootstrap', 'Git', 'Electron'],
         description: (
           <p className="text-sm">
             The first project I got to work on professionally. Whilst learning the ropes of collaborative work, I also
@@ -250,20 +222,20 @@ export const experienceData = [
     logo: Politechnika,
     link: 'https://www.tu.koszalin.pl/',
   },
-  {
-    years: '2014',
-    title: 'First Line of JavaScript Code',
-    duration: 'the beginning',
-    description: (
-      <p className="text-sm">
-        I wrote my first line of JavaScript code in 2014 and from that point onwards this weird journey into digital
-        craftsmanship started. Before that I dabbled in some C++ and C# and enjoyed them, but never could properly get
-        my head around them. I always thought that I wanted to be a programmer, but never imagined myself as a web
-        developer. And yet I started to learn JavaScript and after a while it became my job.
-      </p>
-    ),
-    company: 'Myself',
-    logo: JavaScript,
-    stack: ['JavaScript', 'HTML5', 'CSS3', 'Git'],
-  },
+  // {
+  //   years: '2014',
+  //   title: 'First Line of JavaScript Code',
+  //   duration: 'the beginning',
+  //   description: (
+  //     <p className="text-sm">
+  //       I wrote my first line of JavaScript code in 2014 and from that point onwards this weird journey into digital
+  //       craftsmanship started. Before that I dabbled in some C++ and C# and enjoyed them, but never could properly get
+  //       my head around them. I always thought that I wanted to be a programmer, but never imagined myself as a web
+  //       developer. And yet I started to learn JavaScript and after a while it became my job.
+  //     </p>
+  //   ),
+  //   company: 'Myself',
+  //   logo: JavaScript,
+  //   stack: ['JavaScript', 'HTML5', 'CSS3', 'Git'],
+  // },
 ] satisfies ExperienceItem[];
