@@ -27,7 +27,7 @@ export const PROJECTS = [
   {
     title: 'Central Rest Apartment',
     stack: ['TypeScript', 'Next.js', 'TailwindCSS', 'React'],
-    appLink: 'https://www.central-rest-apartment.com/',
+    appLink: 'https://central-rest-apartment.vercel.app/en-GB',
     githubLink: 'https://github.com/bartosz-szkolnik/central-rest-apartment',
     description: 'A project displaying an apartment in Paphos in Cyprus. Built as an advertisement.',
   },
